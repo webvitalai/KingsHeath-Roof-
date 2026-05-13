@@ -47,7 +47,7 @@ export default function Home() {
               </div>
 
               <h1>
-                Manchester’s <br />
+                Birmingham's <br />
                 <span>Reliable Roofing Experts</span>
               </h1>
 
@@ -64,12 +64,12 @@ export default function Home() {
 
                 <a href="tel:01618745200" className="roof-call-btn">
                   <TelephoneFill />
-                  0161 874 5200
+                  44 7976 286 141
                 </a>
               </div>
 
               <a href="tel:01618745201" className="roof-emergency">
-                🚨 24/7 Emergency Line: 0161 874 5201
+                🚨 24/7 Emergency Line: 44 7976 286 141
               </a>
             </div>
           </div>
@@ -159,14 +159,14 @@ export default function Home() {
 
               <div className="row gy-4">
                 <CtaCard
-                  href="tel:01618745200"
+                  href="tel:44 7976 286 141"
                   icon={<Headset />}
                   label="Call Us"
-                  text="0161 874 5200"
+                  text="+44 7976 286 141"
                 />
 
                 <CtaCard
-                  href="https://wa.me/447700900341"
+                  href="https://wa.me/447976286141"
                   icon={<Whatsapp />}
                   label="WhatsApp"
                   text="Send a Photo"
