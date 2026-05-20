@@ -24,14 +24,18 @@ export default function Footer() {
               <Link to="/" className="roof-footer-logo-wrap">
                 <div className="roof-footer-logo-box">
                   <div className="roof-footer-logo-frame">
-                    <img src="/Images/logo.png" alt="Peak Roofing" />
+                    <img
+                      src="/Images/Logo.png"
+                      alt="Kings Heath Roofing Logo"
+                      className="roof-footer-logo-img"
+                    />
                   </div>
 
                   <div className="roof-footer-logo-text">
                     <h2>
-                      Kings Heath<span>ROOFING</span>
+                      Kings Heath <span>ROOFING</span>
                     </h2>
-                    <small>Uffculme Rd,Birmingham</small>
+                    <small>Uffculme Rd, Birmingham</small>
                   </div>
                 </div>
               </Link>
@@ -87,14 +91,14 @@ export default function Footer() {
 
                 <li>
                   <EnvelopeFill />
-                  <a href="mailto:info@peakroofing.co.uk">
+                  <a href="mailto:info@kingsheath.co.uk">
                     info@kingsheath.co.uk
                   </a>
                 </li>
 
                 <li>
                   <GeoAltFill />
-                  <span>20 Uffculme Rd, Birmingham B30 2TR,UK</span>
+                  <span>20 Uffculme Rd, Birmingham B30 2TR, UK</span>
                 </li>
               </ul>
             </div>
@@ -158,32 +162,65 @@ export default function Footer() {
 
 .roof-footer-logo-wrap{
   text-decoration:none;
+  display:inline-block;
+  max-width:100%;
 }
 
 .roof-footer-logo-box{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:8px;
   margin-bottom:24px;
+  max-width:100%;
 }
 
+/* LOGO WHITE PATCH REMOVED */
 .roof-footer-logo-frame{
-  width:76px;
-  height:76px;
-  border-radius:23px;
-  background:#fffaf3;
+  width:88px;
+  height:82px;
+  min-width:88px;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(242,192,120,.35);
-  box-shadow:0 14px 28px rgba(0,0,0,.22);
+
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:visible !important;
+  flex-shrink:0;
 }
 
-.roof-footer-logo-frame img{
-  height:60px;
-  width:auto;
+.roof-footer-logo-img{
+  width:100%;
+  height:100%;
   object-fit:contain;
   display:block;
+
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+
+  filter:
+    brightness(1.12)
+    contrast(1.25)
+    saturate(1.12)
+    drop-shadow(0 6px 10px rgba(0,0,0,.55))
+    drop-shadow(0 0 12px rgba(242,192,120,.2));
+
+  transition:.35s ease;
+}
+
+.roof-footer-logo-wrap:hover .roof-footer-logo-img{
+  transform:scale(1.05);
+}
+
+.roof-footer-logo-text{
+  margin-left:-3px;
+  min-width:0;
 }
 
 .roof-footer-logo-text h2{
@@ -205,7 +242,7 @@ export default function Footer() {
   color:#fdebd3;
   font-size:10px;
   font-weight:800;
-  letter-spacing:3px;
+  letter-spacing:2.4px;
   text-transform:uppercase;
 }
 
@@ -226,6 +263,7 @@ export default function Footer() {
   background:rgba(255,250,243,.1);
   border:1px solid rgba(255,255,255,.14);
   backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
   transition:.35s ease;
 }
 
@@ -402,25 +440,41 @@ export default function Footer() {
   .roof-footer{
     padding-top:70px;
   }
+
+  .roof-footer-logo-frame{
+    width:78px;
+    height:72px;
+    min-width:78px;
+  }
+
+  .roof-footer-logo-text h2{
+    font-size:25px;
+  }
 }
 
 @media(max-width:575px){
   .roof-footer-logo-box{
-    align-items:flex-start;
+    align-items:center;
+    gap:6px;
   }
 
   .roof-footer-logo-frame{
-    width:58px;
-    height:58px;
-    border-radius:18px;
+    width:66px;
+    height:60px;
+    min-width:66px;
   }
 
-  .roof-footer-logo-frame img{
-    height:45px;
+  .roof-footer-logo-text{
+    margin-left:-2px;
   }
 
   .roof-footer-logo-text h2{
     font-size:22px;
+  }
+
+  .roof-footer-logo-text small{
+    font-size:8px;
+    letter-spacing:1px;
   }
 
   .roof-footer-contact-card{
@@ -434,6 +488,23 @@ export default function Footer() {
 
   .roof-footer-btn{
     width:100%;
+  }
+}
+
+@media(max-width:390px){
+  .roof-footer-logo-frame{
+    width:58px;
+    height:54px;
+    min-width:58px;
+  }
+
+  .roof-footer-logo-text h2{
+    font-size:19px;
+  }
+
+  .roof-footer-logo-text small{
+    font-size:7px;
+    letter-spacing:.8px;
   }
 }
       `}</style>

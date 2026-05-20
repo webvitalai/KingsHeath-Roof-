@@ -25,7 +25,11 @@ export default function Header() {
           <div className="container roof-nav-box">
             <Link className="navbar-brand roof-brand" to="/">
               <div className="roof-logo-frame">
-                <img src="/Images/logo.png" alt="Peak Roofing" />
+                <img
+                  src="/Images/Logo.png"
+                  alt="Kings Heath Roofing Logo"
+                  className="roof-logo-img"
+                />
               </div>
 
               <div className="roof-brand-text">
@@ -179,33 +183,62 @@ export default function Header() {
   background:rgba(255,250,243,.1);
   border:1px solid rgba(255,255,255,.16);
   backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
   box-shadow:0 25px 70px rgba(0,0,0,.28);
 }
 
 .roof-brand{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:10px;
   text-decoration:none;
 }
 
+/* LOGO WHITE PATCH REMOVED */
 .roof-logo-frame{
-  width:76px;
-  height:76px;
-  border-radius:23px;
-  background:#fffaf3;
+  width:88px;
+  height:82px;
+  min-width:88px;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(242,192,120,.35);
-  box-shadow:0 14px 28px rgba(0,0,0,.22);
+
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  overflow:visible !important;
 }
 
-.roof-logo-frame img{
-  height:60px;
-  width:auto;
+.roof-logo-img{
+  width:100%;
+  height:100%;
   object-fit:contain;
   display:block;
+
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+
+  filter:
+    brightness(1.12)
+    contrast(1.25)
+    saturate(1.12)
+    drop-shadow(0 5px 9px rgba(0,0,0,.5))
+    drop-shadow(0 0 12px rgba(242,192,120,.2));
+
+  transition:.35s ease;
+}
+
+.roof-brand:hover .roof-logo-img{
+  transform:scale(1.05);
+}
+
+.roof-brand-text{
+  margin-left:-4px;
 }
 
 .roof-brand-text h2{
@@ -358,6 +391,12 @@ export default function Header() {
   .roof-quote-btn{
     text-align:center;
   }
+
+  .roof-logo-frame{
+    width:78px;
+    height:72px;
+    min-width:78px;
+  }
 }
 
 @media(max-width:575px){
@@ -371,14 +410,23 @@ export default function Header() {
     justify-content:space-between;
   }
 
-  .roof-logo-frame{
-    width:58px;
-    height:58px;
-    border-radius:18px;
+  .roof-nav-box{
+    padding:12px 14px;
+    border-radius:22px;
   }
 
-  .roof-logo-frame img{
-    height:45px;
+  .roof-brand{
+    gap:7px;
+  }
+
+  .roof-logo-frame{
+    width:64px;
+    height:60px;
+    min-width:64px;
+  }
+
+  .roof-brand-text{
+    margin-left:-3px;
   }
 
   .roof-brand-text h2{
@@ -388,6 +436,23 @@ export default function Header() {
   .roof-brand-text small{
     font-size:8px;
     letter-spacing:1px;
+  }
+}
+
+@media(max-width:390px){
+  .roof-logo-frame{
+    width:58px;
+    height:54px;
+    min-width:58px;
+  }
+
+  .roof-brand-text h2{
+    font-size:18px;
+  }
+
+  .roof-brand-text small{
+    font-size:7px;
+    letter-spacing:.8px;
   }
 }
       `}</style>
