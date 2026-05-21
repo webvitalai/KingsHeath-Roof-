@@ -26,7 +26,7 @@ export default function Header() {
             <Link className="navbar-brand roof-brand" to="/">
               <div className="roof-logo-frame">
                 <img
-                  src="/Images/Logo.png"
+                  src="/Images/Logo.webp"
                   alt="Kings Heath Roofing Logo"
                   className="roof-logo-img"
                 />

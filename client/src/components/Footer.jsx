@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="roof-footer-logo-box">
                   <div className="roof-footer-logo-frame">
                     <img
-                      src="/Images/Logo.png"
+                      src="/Images/Logo.webp"
                       alt="Kings Heath Roofing Logo"
                       className="roof-footer-logo-img"
                     />
