@@ -31,17 +31,22 @@ export default function MainLayout() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/07472319187"
+        href="https://wa.me/447472319187"
         target="_blank"
         rel="noreferrer"
         className="whatsapp-float-btn"
+        aria-label="WhatsApp Chat"
       >
         <Whatsapp />
       </a>
 
       {/* Scroll Top Button */}
       {showTopBtn && (
-        <button className="scroll-top-btn" onClick={scrollToTop}>
+        <button
+          className="scroll-top-btn"
+          onClick={scrollToTop}
+          aria-label="Scroll To Top"
+        >
           <ArrowUp />
         </button>
       )}
